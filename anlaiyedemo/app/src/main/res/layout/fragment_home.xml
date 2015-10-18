@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bg_common"
+    android:orientation="vertical"
+    >
+
+    <include layout="@layout/widget_title_home2"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffffff"
+        android:orientation="horizontal"
+        android:paddingBottom="5.0dip"
+        android:paddingTop="5.0dip"
+        >
+
+        <LinearLayout
+            android:id="@+id/home_huaguoshan_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/home_huaguoshan_tv"
+                style="@style/gray_dark_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="花果山"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_pay_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/home_pay_tv"
+                style="@style/black_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/home_titletextbg"
+                android:gravity="center"
+                android:text="俺来买"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/home_box_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            >
+
+            <TextView
+                android:id="@+id/home_box_tv"
+                style="@style/gray_dark_14sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="月光宝盒"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View style="@style/common_line_style"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        >
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/activity_home_ll_footer"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="50.0dip"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:orientation="vertical"-->
+            <!-->-->
+
+            <!--<include layout="@layout/navigation_layout"/>-->
+
+            <!--&lt;!&ndash;<include layout="@layout/widget_tab_home"/>&ndash;&gt;-->
+        <!--</LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:baselineAligned="false"
+            >
+
+            <LinearLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical"
+                >
+
+                <ListView
+                    android:id="@+id/lv_home_left"
+                    android:layout_width="fill_parent"
+                    android:layout_height="0.0dip"
+                    android:layout_weight="1.0"
+                    android:divider="@null"
+                    android:dividerHeight="0.0dip"
+                    android:scrollbars="none"
+                    />
+
+                <LinearLayout
+                    android:id="@+id/llyt_home_leftlv_bottom"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/rlyt_home_breakfast"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_home_left_breakfast"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/breakfast_bg"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_category_tag1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2.0dip"
+                            android:layout_marginTop="2.0dip"
+                            android:background="@color/money_red"
+                            android:gravity="center"
+                            android:paddingLeft="4.0dip"
+                            android:paddingRight="4.0dip"
+                            android:text="new"
+                            android:textColor="@color/white"
+                            android:textSize="10.0sp"
+                            android:visibility="gone"
+                            />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/rlyt_home_dinner"
+                        android:layout_width="fill_parent"
+                        android:layout_height="40.0dip"
+                        android:visibility="gone"
+                        >
+
+                        <ImageView
+                            android:id="@+id/iv_home_left_dinner"
+                            android:layout_width="fill_parent"
+                            android:layout_height="40.0dip"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/dinner_bg"
+                            />
+
+                        <TextView
+                            android:id="@+id/tv_category_tag2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="2.0dip"
+                            android:layout_marginTop="2.0dip"
+                            android:background="@color/money_red"
+                            android:gravity="center"
+                            android:paddingLeft="4.0dip"
+                            android:paddingRight="4.0dip"
+                            android:text="new"
+                            android:textColor="@color/white"
+                            android:textSize="10.0sp"
+                            android:visibility="gone"
+                            />
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0.0dip"
+                android:layout_height="fill_parent"
+                android:layout_weight="3.5"
+                android:background="@color/bg_common"
+                android:orientation="vertical"
+                >
+
+                <!--<cn.com.anlaiye.views.pullrefresh.PullToRefreshListView-->
+                <!--android:id="@+id/plv_home_right"-->
+                <!--xmlns:ptr="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="fill_parent"-->
+                <!--android:divider="@null"-->
+                <!--android:listSelector="@android:color/transparent"-->
+                <!--android:visibility="visible"-->
+                <!--ptr:ptrAnimationStyle="flip"-->
+                <!--ptr:ptrHeaderBackground="#ffffffff"-->
+                <!--ptr:ptrHeaderTextColor="#ff000000"-->
+                <!--ptr:ptrMode="both"-->
+                <!--/>-->
+
+                <ImageView
+                    android:id="@+id/iv_home_returntop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginBottom="10.0dip"
+                    android:layout_marginRight="10.0dip"
+                    android:src="@drawable/homeview_return_top"
+                    android:visibility="visible"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</LinearLayout>

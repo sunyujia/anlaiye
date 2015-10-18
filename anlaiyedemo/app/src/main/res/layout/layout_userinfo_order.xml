@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    >
+
+    <RelativeLayout
+        android:id="@+id/ordertop_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="8.0dip"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawableLeft="@drawable/userinfo_item1"
+            android:drawablePadding="8.0dip"
+            android:gravity="center_vertical"
+            android:text="俺消费的订单"
+            android:textColor="@color/black"
+            android:textSize="15.0sp"
+            />
+
+        <TextView
+            android:id="@+id/order_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:drawablePadding="8.0dip"
+            android:drawableRight="@drawable/arrowx"
+            android:gravity="center_vertical"
+            android:text="查看已消费的订单"
+            android:textSize="14.0sp"
+            />
+    </RelativeLayout>
+
+    <View style="@style/common_line_style"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:paddingBottom="5.0dip"
+        android:paddingLeft="10.0dip"
+        android:paddingTop="5.0dip"
+        >
+
+        <RelativeLayout
+            android:id="@+id/order1_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="34.0dip"
+                android:layout_height="34.0dip"
+                android:src="@drawable/wait_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/img1"
+                android:text="待付款"
+                android:textColor="@color/userinfo_gray"
+                android:textSize="@dimen/common_text_size11"
+                />
+
+            <TextView
+                android:id="@+id/order_count1"
+                style="@style/common_cirlce_number_style"
+                android:layout_toRightOf="@id/img1"
+                android:text="10"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order2_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="34.0dip"
+                android:layout_height="34.0dip"
+                android:src="@drawable/pickedup_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img2"
+                android:text="待抢单"
+                android:textColor="@color/userinfo_gray"
+                android:textSize="@dimen/common_text_size11"
+                />
+
+            <TextView
+                android:id="@+id/order_count2"
+                style="@style/common_cirlce_number_style"
+                android:layout_toRightOf="@+id/img2"
+                android:text="10"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order3_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="34.0dip"
+                android:layout_height="34.0dip"
+                android:src="@drawable/purchase_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img3"
+                android:text="已接单"
+                android:textColor="@color/userinfo_gray"
+                android:textSize="@dimen/common_text_size11"
+                />
+
+            <TextView
+                android:id="@+id/order_count3"
+                style="@style/common_cirlce_number_style"
+                android:layout_toRightOf="@id/img3"
+                android:text="10"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order4_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="34.0dip"
+                android:layout_height="34.0dip"
+                android:src="@drawable/peliveries_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img4"
+                android:text="配送中"
+                android:textColor="@color/userinfo_gray"
+                android:textSize="@dimen/common_text_size11"
+                />
+
+            <TextView
+                android:id="@+id/order_count4"
+                style="@style/common_cirlce_number_style"
+                android:layout_toRightOf="@+id/img4"
+                android:text="10"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/order5_layout"
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:clickable="true"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:id="@+id/img5"
+                android:layout_width="34.0dip"
+                android:layout_height="34.0dip"
+                android:src="@drawable/completed_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img5"
+                android:text="已完成"
+                android:textColor="@color/userinfo_gray"
+                android:textSize="@dimen/common_text_size11"
+                />
+
+            <TextView
+                android:id="@+id/order_count5"
+                style="@style/common_cirlce_number_style"
+                android:layout_toRightOf="@id/img5"
+                android:text="10"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="8.0dip"
+        android:background="@color/common_gray_bg"
+        />
+</LinearLayout>

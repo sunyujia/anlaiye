@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="menu_titles">
+        <item>俺来买</item>
+        <item>俺来卖</item>
+        <item>俺有才</item>
+        <item>俺来玩</item>
+        <item>消息</item>
+        <item>俺要加入</item>
+        <item>分享给好友</item>
+    </string-array>
+
+    <string-array name="home_left_titles">
+        <item>所有商品</item>
+        <item>爆款活动</item>
+        <item>方便素食</item>
+        <item>饮料酒水</item>
+        <item>休闲零食</item>
+        <item>牛奶乳品</item>
+        <item>坚果蜜饯</item>
+        <item>饼干糕点</item>
+        <item>日化用品</item>
+        <item>进口商品</item>
+        <item>女性护理</item>
+        <item>花果山</item>
+        <item>本校特色</item>
+        <item>好好学习</item>
+        <item>数码配件</item>
+
+    </string-array>
+    <string-array name="launch_list_entries">
+        <item>外部商户订单</item>
+        <item>远程订单</item>
+    </string-array>
+    <array name="menulist_img">
+        <item>@drawable/menu_1_y</item>
+        <item>@drawable/menu_selector_2</item>
+        <item>@drawable/menu_selector_3</item>
+        <item>@drawable/menu_selector_4</item>
+        <item>@drawable/menu_selector_5</item>
+        <item>@drawable/menu_selector_6</item>
+        <item>@drawable/menu_selector_7</item>
+    </array>
+    <array name="menulist_img_select">
+        <item>@drawable/menu_1_y</item>
+        <item>@drawable/menu_2_y</item>
+        <item>@drawable/menu_3_y</item>
+        <item>@drawable/menu_play_y</item>
+        <item>@drawable/homebot_3_y</item>
+        <item>@drawable/menu_5_y</item>
+        <item>@drawable/menu_6_y</item>
+    </array>
+</resources>

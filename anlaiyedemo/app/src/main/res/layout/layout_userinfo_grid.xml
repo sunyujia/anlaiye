@@ -1,0 +1,991 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+    <!-- line one -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item13"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="月光宝盒订单"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent"
+                android:layout_alignTop="@id/icon_parent"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item3"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="俺有金0元"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent1"
+                android:layout_alignTop="@id/icon_parent1"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item8"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="消费收藏"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent2"
+                android:layout_alignTop="@id/icon_parent2"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item11"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="消费足迹"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent3"
+                android:layout_alignTop="@id/icon_parent3"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--  line two  -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item4"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="积分商城"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent4"
+                android:layout_alignTop="@id/icon_parent4"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/point_detail_icon"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="积分明细"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent5"
+                android:layout_alignTop="@id/icon_parent5"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item2"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="俺的优惠劵"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent6"
+                android:layout_alignTop="@id/icon_parent6"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item5"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="在线客服"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent7"
+                android:layout_alignTop="@id/icon_parent7"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--   line three  -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item15"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="申请筋斗云"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent8"
+                android:layout_alignTop="@id/icon_parent8"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item10"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="申请土地公"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent9"
+                android:layout_alignTop="@id/icon_parent9"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent10"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="俺理财"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent10"
+                android:layout_alignTop="@id/icon_parent10"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent11"
+                android:layout_alignTop="@id/icon_parent11"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+    <!--   line four -->
+    <View
+        android:id="@+id/userinfo_line"
+        style="@style/common_line_style"
+        android:layout_marginTop="8.0dip"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item14"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    android:text="芝麻信用"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent12"
+                android:layout_alignTop="@id/icon_parent12"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent13"
+                android:layout_alignTop="@id/icon_parent13"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent14"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent14"
+                android:layout_alignTop="@id/icon_parent14"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+            android:gravity="center"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/userinfo_itembg2"
+                android:visibility="gone"
+                />
+
+            <LinearLayout
+                android:id="@+id/icon_parent15"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="50.0dip"
+                    />
+
+                <TextView
+                    style="@style/gray_dark_14sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5.0dip"
+                    />
+            </LinearLayout>
+
+            <View
+                style="@style/common_line_style"
+                android:layout_alignParentBottom="true"
+                />
+
+            <View
+                style="@style/common_line_horizontal_style"
+                android:layout_alignParentRight="true"
+                />
+
+            <TextView
+                style="@style/common_cirlce_number_style"
+                android:layout_alignRight="@id/icon_parent15"
+                android:layout_alignTop="@id/icon_parent15"
+                android:text="10"
+                android:visibility="visible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

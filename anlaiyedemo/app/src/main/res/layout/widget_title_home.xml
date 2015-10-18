@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="@dimen/common_top_height"
+    android:background="@color/app_top_title"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/to_sell_img"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:scaleType="centerInside"
+        android:src="@drawable/goback_bg"
+        android:visibility="visible"
+        />
+
+    <RelativeLayout
+        android:id="@+id/home_title_right"
+        android:layout_width="73.0dip"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            >
+
+            <ImageView
+                android:id="@+id/home_title_search"
+                android:layout_width="38.0dip"
+                android:layout_height="fill_parent"
+                android:paddingRight="5.0dip"
+                android:src="@drawable/icon_home_search"
+                />
+
+            <ImageView
+                android:id="@+id/home_title_personinfo"
+                android:layout_width="35.0dip"
+                android:layout_height="fill_parent"
+                android:paddingRight="5.0dip"
+                android:src="@drawable/me_icon"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/msg_point_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="5.0dip"
+            android:src="@drawable/msg_small_red_point"
+            android:visibility="invisible"
+            />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/home_title_middle"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_toLeftOf="@id/home_title_right"
+        android:layout_toRightOf="@id/to_sell_img"
+        >
+
+        <TextView
+            android:id="@+id/home_title_tv"
+            style="@style/black_20sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:drawablePadding="3.0dip"
+            android:drawableRight="@drawable/arrow_down"
+            android:singleLine="true"
+            android:text="Title"
+            />
+    </RelativeLayout>
+</RelativeLayout>

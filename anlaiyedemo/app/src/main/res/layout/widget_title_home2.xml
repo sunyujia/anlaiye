@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="44.0dip"
+    android:background="#ffffda46"
+    android:orientation="horizontal"
+    >
+
+    <ImageView
+        android:id="@+id/title_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:paddingLeft="8.0dip"
+        android:scaleType="centerInside"
+        android:src="@drawable/home_column"
+        />
+
+    <TextView
+        android:id="@+id/home_title_searchtv"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_alignParentRight="true"
+        android:drawableLeft="@drawable/home_search"
+        android:gravity="center_vertical"
+        android:paddingRight="10.0dip"
+        android:text="搜索"
+        style="@style/black_14sp"
+        />
+
+    <LinearLayout
+        android:id="@+id/home_title_middle"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        >
+
+        <TextView
+            android:id="@+id/home_title_select"
+            style="@style/black_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawablePadding="3.0dip"
+            android:drawableRight="@drawable/arrow_down"
+            android:singleLine="true"
+            android:text="切换学校"
+            />
+
+        <TextView
+            android:id="@+id/home_title_schoolnametv"
+            style="@style/black_12sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="上海交通大学"
+            />
+    </LinearLayout>
+</RelativeLayout>
