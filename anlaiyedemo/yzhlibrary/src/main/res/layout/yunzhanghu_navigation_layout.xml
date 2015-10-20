@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="48dp"
+              android:background="@color/bg_color"
+              android:orientation="vertical"
+    >
+
+    <ImageView
+        style="@style/DividerStyle"
+        />
+
+    <RadioGroup
+        android:id="@+id/tab_rg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        >
+
+        <RadioButton
+            android:id="@+id/rb_yzh"
+            style="@style/YZHTabRadioButtonStyle"
+            android:checked="true"
+            android:drawableTop="@drawable/tab_selector_yunzhanghu"
+            android:text="云账户"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_financing"
+            style="@style/YZHTabRadioButtonStyle"
+            android:drawableTop="@drawable/tab_selector_financing"
+            android:text="我要理财"
+            />
+
+        <RadioButton
+            android:id="@+id/rb_personal"
+            style="@style/YZHTabRadioButtonStyle"
+            android:drawableTop="@drawable/tab_selector_personal"
+            android:text="个人中心"
+            />
+
+    </RadioGroup>
+</LinearLayout>
