@@ -2,5 +2,6 @@
 <resources>
     <color name="white_bg_color">#cccccc</color>
     <color name="bg_color">#F2FFFFFF</color>
+    <item name="dialog_item_title_color" type="color">#343434</item>
 
 </resources>

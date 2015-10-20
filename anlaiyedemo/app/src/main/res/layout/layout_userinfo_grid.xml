@@ -100,7 +100,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
-                    android:src="@drawable/userinfo_item3"
+                    android:src="@drawable/userinfo_serviceitem"
                     />
 
                 <TextView
@@ -108,7 +108,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
-                    android:text="俺有金0元"
+                    android:text="生活服务"
                     />
             </LinearLayout>
 
@@ -148,10 +148,11 @@
                 />
 
             <LinearLayout
-                android:id="@+id/icon_parent2"
+                android:id="@+id/layout_money"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical"
                 >
@@ -160,7 +161,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
-                    android:src="@drawable/userinfo_item8"
+                    android:src="@drawable/userinfo_item3"
                     />
 
                 <TextView
@@ -168,7 +169,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
-                    android:text="消费收藏"
+                    android:text="俺有金0元付"
                     />
             </LinearLayout>
 
@@ -184,8 +185,8 @@
 
             <TextView
                 style="@style/common_cirlce_number_style"
-                android:layout_alignRight="@id/icon_parent2"
-                android:layout_alignTop="@id/icon_parent2"
+                android:layout_alignRight="@id/layout_money"
+                android:layout_alignTop="@id/layout_money"
                 android:text="10"
                 android:visibility="visible"
                 />
@@ -647,6 +648,7 @@
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:orientation="vertical"
+                android:visibility="gone"
                 >
 
                 <ImageView
@@ -842,6 +844,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
+                    android:src="@drawable/userinfo_item8"
                     />
 
                 <TextView
@@ -849,6 +852,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
+                    android:text="消费收藏"
                     />
             </LinearLayout>
 

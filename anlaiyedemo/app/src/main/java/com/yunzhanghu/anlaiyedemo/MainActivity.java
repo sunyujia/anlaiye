@@ -1,5 +1,6 @@
 package com.yunzhanghu.anlaiyedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -38,6 +39,9 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void selectItem(int position, String title) {
+        if (position == 4) {
+            startActivity(new Intent(this, ZeroPayActivity.class));
+        }
         Toast.makeText(this, "position: " + position, Toast.LENGTH_SHORT).show();
     }
 

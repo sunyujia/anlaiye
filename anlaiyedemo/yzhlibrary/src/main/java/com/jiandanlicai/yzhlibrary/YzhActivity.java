@@ -1,9 +1,15 @@
 package com.jiandanlicai.yzhlibrary;
 
+import android.app.Dialog;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.util.DisplayMetrics;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -30,6 +36,7 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_yzh);
         mFromFlag = getIntent().getIntExtra("from", 0);
         TextView tvBack = (TextView) findViewById(R.id.tv_back);
@@ -84,16 +91,8 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
                 fragment = FinancingDetailFragment.newInstance();
             } else {//未登录
                 fragment = RegisterFragment.newInstance();
-                //修改后进入授权页面
-//                fragment = AuthorizeFragment.newInstance();
             }
-        }
-// else if (i == R.id.iv_content_authorize) {
-//            点击授权后续操作
-//            MyApplication.sIsLogin = true;
-//            fragment = YzhFragment.newInstance(true);
-//        }
-        else if (i == R.id.iv_content_register1) {
+        } else if (i == R.id.iv_content_register1) {
             fragment = Register2Fragment.newInstance();
         } else if (i == R.id.iv_content_register2) {
             fragment = Register3Fragment.newInstance();
@@ -109,8 +108,15 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
         } else if (i == R.id.iv_content_buy) {
             fragment = BuyTwoFragment.newInstance();
         } else if (i == R.id.iv_content_buy2) {
+            if (mFromFlag == 3) {
+                //弹出对话框
+                showDialog();
+            }
             fragment = BuyThreeFragment.newInstance();
         } else if (i == R.id.iv_content_buy3) {
+            if (mFromFlag == 3) {
+                setResult(RESULT_OK);
+            }
             if (mTabTag == 2) {
                 mRB.setChecked(true);
             }
@@ -126,5 +132,47 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content, fragment).commit();
         }
+    }
+
+    private void showDialog() {
+        final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
+        dialog.show();
+        View rootView = LayoutInflater.from(this).inflate(
+                R.layout.tip_dialog, null);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        int screenWidth = getScreenWidth(this);
+        float width = screenWidth * 0.9f;
+        params.width = (int) width;
+        params.height = dip2px(this, 185);
+        dialog.getWindow().setAttributes(params);
+        dialog.setContentView(rootView);
+        dialog.findViewById(R.id.btn_confirm).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                finish();
+            }
+        });
+        dialog.findViewById(R.id.btn_cancel).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+    /**
+     * 根据手机的分辨率从 dp 的单位 转成为 px(像素)
+     */
+    private int dip2px(Context context, float dpValue) {
+        final float scale = context.getResources().getDisplayMetrics().density;
+        return (int) (dpValue * scale + 0.5f);
+    }
+
+    private int getScreenWidth(Context context) {
+        WindowManager windowManager = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        DisplayMetrics dm = new DisplayMetrics();
+        windowManager.getDefaultDisplay().getMetrics(dm);
+        return dm.widthPixels;
     }
 }
