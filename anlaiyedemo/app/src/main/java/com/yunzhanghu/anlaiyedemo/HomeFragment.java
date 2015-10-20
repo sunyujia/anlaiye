@@ -12,9 +12,10 @@ import android.widget.RadioGroup;
 /**
  * Created by max on 15/10/12.
  */
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
 
     private ChangeContentListener mCallback;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -22,6 +23,7 @@ public class HomeFragment extends Fragment {
         ListView homeLeftList = (ListView) rootView.findViewById(R.id.lv_home_left);
         HomeLeftListAdapter adapter = new HomeLeftListAdapter(getActivity());
         homeLeftList.setAdapter(adapter);
+        rootView.findViewById(R.id.iv_goods).setOnClickListener(this);
         return rootView;
     }
 
@@ -36,8 +38,15 @@ public class HomeFragment extends Fragment {
         }
     }
 
+    @Override
+    public void onClick(View v) {
+        mCallback.onContentClickListener(v);
+    }
+
     public interface ChangeContentListener {
         void changeContent(RadioGroup group, int checkedId);
+
+        void onContentClickListener(View v);
     }
 
 }

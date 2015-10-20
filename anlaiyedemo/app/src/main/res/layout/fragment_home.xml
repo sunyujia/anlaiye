@@ -82,17 +82,17 @@
         >
 
         <!--<LinearLayout-->
-            <!--android:id="@+id/activity_home_ll_footer"-->
-            <!--android:layout_width="fill_parent"-->
-            <!--android:layout_height="50.0dip"-->
-            <!--android:layout_alignParentBottom="true"-->
-            <!--android:layout_alignParentLeft="true"-->
-            <!--android:orientation="vertical"-->
-            <!-->-->
+        <!--android:id="@+id/activity_home_ll_footer"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="50.0dip"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:orientation="vertical"-->
+        <!-->-->
 
-            <!--<include layout="@layout/navigation_layout"/>-->
+        <!--<include layout="@layout/navigation_layout"/>-->
 
-            <!--&lt;!&ndash;<include layout="@layout/widget_tab_home"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;<include layout="@layout/widget_tab_home"/>&ndash;&gt;-->
         <!--</LinearLayout>-->
 
         <LinearLayout
@@ -216,6 +216,13 @@
                 <!--ptr:ptrHeaderTextColor="#ff000000"-->
                 <!--ptr:ptrMode="both"-->
                 <!--/>-->
+
+                <ImageView
+                    android:id="@+id/iv_goods"
+                    android:layout_width="match_parent"
+                    android:src="@drawable/userinfo_pay_un"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"/>
 
                 <ImageView
                     android:id="@+id/iv_home_returntop"

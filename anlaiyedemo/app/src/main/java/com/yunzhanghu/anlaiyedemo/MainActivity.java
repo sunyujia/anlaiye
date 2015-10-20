@@ -1,8 +1,10 @@
 package com.yunzhanghu.anlaiyedemo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.view.View;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -13,11 +15,13 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     private SlidingMenu mSlidingMenu;
 
+    private RadioGroup radioGroup;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.frame_content);
-        RadioGroup radioGroup = (RadioGroup) findViewById(R.id.tab_rg);
+        radioGroup = (RadioGroup) findViewById(R.id.tab_rg);
         radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -48,6 +52,9 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
             case R.id.rb_first:
                 fragment = new HomeFragment();
                 break;
+            case R.id.rb_second:
+                fragment = new ShoppingCartFragment();
+                break;
             case R.id.rb_forth:
                 fragment = new UserInfoFragment();
                 break;
@@ -55,5 +62,20 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.content, fragment).commit();
         }
+    }
+
+    @Override
+    public void onContentClickListener(View v) {
+        switch (v.getId()) {
+            case R.id.iv_goods:
+                startActivity(new Intent(this, GoodsDetailActivity.class));
+                break;
+        }
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        super.onNewIntent(intent);
+        radioGroup.check(R.id.rb_second);
     }
 }
