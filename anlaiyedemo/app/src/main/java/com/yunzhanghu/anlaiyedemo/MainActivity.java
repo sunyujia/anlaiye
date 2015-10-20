@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.RadioGroup;
+import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
@@ -37,7 +38,7 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void selectItem(int position, String title) {
-
+        Toast.makeText(this, "position: " + position, Toast.LENGTH_SHORT).show();
     }
 
     @Override
