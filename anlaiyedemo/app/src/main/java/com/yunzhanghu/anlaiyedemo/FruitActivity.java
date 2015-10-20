@@ -20,6 +20,5 @@ public class FruitActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
 //        todo 进入实名认证过程
-        
     }
 }
