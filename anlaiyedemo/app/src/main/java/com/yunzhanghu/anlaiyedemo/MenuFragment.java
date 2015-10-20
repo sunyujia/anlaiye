@@ -69,6 +69,8 @@ public class MenuFragment extends Fragment implements AdapterView.OnItemClickLis
         mMenuItems.add(new NavDrawerItem(mMenuTitles[4], mMenuIconsTypeArray.getResourceId(4, -1)));
         mMenuItems.add(new NavDrawerItem(mMenuTitles[5], mMenuIconsTypeArray.getResourceId(5, -1)));
         mMenuItems.add(new NavDrawerItem(mMenuTitles[6], mMenuIconsTypeArray.getResourceId(6, -1)));
+        mMenuItems.add(new NavDrawerItem(mMenuTitles[6], mMenuIconsTypeArray.getResourceId(7, -1)));
+
         mMenuIconsTypeArray.recycle();
         mAdapter = new NavDrawerListAdapter(getActivity(), mMenuItems);
         mMenuList.setAdapter(mAdapter);

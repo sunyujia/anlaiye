@@ -21,7 +21,7 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_shopping_cart, container, false);
         view.findViewById(R.id.btn_oepn).setOnClickListener(this);
-        TextView tv = (TextView) view.findViewById(R.id.home_title_tv);
+        TextView tv = (TextView) view.findViewById(R.id.tv_title);
         ImageView imageView = (ImageView) view.findViewById(R.id.home_title_personinfo);
         imageView.setImageResource(R.drawable.shopcar_delete_icon);
         view.findViewById(R.id.home_title_right).setVisibility(View.VISIBLE);

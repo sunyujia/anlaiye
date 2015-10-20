@@ -8,7 +8,7 @@
     >
 
     <ImageView
-        android:id="@+id/to_sell_img"
+        android:id="@+id/iv_return"
         android:layout_width="wrap_content"
         android:layout_height="fill_parent"
         android:scaleType="centerInside"
@@ -65,18 +65,17 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_toLeftOf="@id/home_title_right"
-        android:layout_toRightOf="@id/to_sell_img"
+        android:layout_toRightOf="@id/iv_return"
         >
 
         <TextView
-            android:id="@+id/home_title_tv"
+            android:id="@+id/tv_title"
             style="@style/black_20sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
             android:drawablePadding="3.0dip"
             android:singleLine="true"
-            android:text="Title"
             />
     </RelativeLayout>
 </RelativeLayout>

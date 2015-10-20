@@ -42,6 +42,9 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void selectItem(int position, String title) {
+        if (position == 4) {
+            startActivity(new Intent(this, ZeroPayActivity.class));
+        }
         Toast.makeText(this, "position: " + position, Toast.LENGTH_SHORT).show();
     }
 

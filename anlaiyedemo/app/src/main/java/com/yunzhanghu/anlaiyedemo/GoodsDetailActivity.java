@@ -16,8 +16,8 @@ public class GoodsDetailActivity extends Activity implements View.OnClickListene
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_goods_detail);
-        TextView tv = (TextView) findViewById(R.id.home_title_tv);
-        findViewById(R.id.to_sell_img).setOnClickListener(this);
+        TextView tv = (TextView) findViewById(R.id.tv_title);
+        findViewById(R.id.iv_return).setOnClickListener(this);
         findViewById(R.id.btn_left).setOnClickListener(this);
         findViewById(R.id.btn_right).setOnClickListener(this);
         ImageView imageView = (ImageView) findViewById(R.id.home_title_personinfo);
@@ -30,7 +30,7 @@ public class GoodsDetailActivity extends Activity implements View.OnClickListene
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.to_sell_img:
+            case R.id.iv_return:
                 onBackPressed();
                 break;
             case R.id.iv_goods_detail:
