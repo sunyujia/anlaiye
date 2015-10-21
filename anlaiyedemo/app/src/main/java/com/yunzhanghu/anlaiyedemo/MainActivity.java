@@ -11,7 +11,9 @@ import android.widget.Toast;
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
 
-public class MainActivity extends SlidingFragmentActivity implements MenuFragment.SLMenuListOnItemClickListener, HomeFragment.ChangeContentListener {
+import java.util.IllegalFormatCodePointException;
+
+public class MainActivity extends SlidingFragmentActivity implements MenuFragment.SLMenuListOnItemClickListener, HomeFragment.ChangeContentListener, ShoppingCartFragment.OnViewClickListener {
 
     private SlidingMenu mSlidingMenu;
 
@@ -80,5 +82,18 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
         radioGroup.check(R.id.rb_second);
+    }
+
+    @Override
+    public void onViewClick(View view) {
+        startActivityForResult(new Intent(this, FruitActivity.class), 888);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 888) {
+            Toast.makeText(this, "换图", Toast.LENGTH_LONG).show();
+        }
     }
 }

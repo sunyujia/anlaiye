@@ -11,14 +11,14 @@ import android.widget.ImageView;
 import com.jiandanlicai.yzhlibrary.OnViewClickListener;
 import com.jiandanlicai.yzhlibrary.R;
 
-public class Register2Fragment extends BaseFragment {
+public class PayPwdFragment extends BaseFragment {
 
 
-    public static Register2Fragment newInstance() {
-        return new Register2Fragment();
+    public static PayPwdFragment newInstance() {
+        return new PayPwdFragment();
     }
 
-    public Register2Fragment() {
+    public PayPwdFragment() {
         // Required empty public constructor
     }
 
@@ -43,8 +43,8 @@ public class Register2Fragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register2, container, false);
-        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_register2);
+        View view = inflater.inflate(R.layout.fragment_pay_pwd, container, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_pay_pwd);
         imageView.setOnClickListener(this);
         return view;
     }

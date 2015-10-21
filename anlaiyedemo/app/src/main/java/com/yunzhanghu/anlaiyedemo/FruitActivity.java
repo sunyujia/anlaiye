@@ -28,14 +28,17 @@ public class FruitActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
 //        todo 进入实名认证过程
-        startActivityForResult(new Intent(this, RealNameActivity.class), 1000);
+        Intent intent = new Intent(this, RealNameActivity.class);
+        intent.putExtra("from", "fruit");
+        startActivityForResult(intent, 1000);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1000) {
-            Toast.makeText(this, "换图", Toast.LENGTH_LONG).show();
+            setResult(RESULT_OK);
+            finish();
 //            mImageView.setImageResource();
         }
     }
