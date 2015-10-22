@@ -23,6 +23,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         ListView homeLeftList = (ListView) rootView.findViewById(R.id.lv_home_left);
         HomeLeftListAdapter adapter = new HomeLeftListAdapter(getActivity());
         homeLeftList.setAdapter(adapter);
+//        旧的入口
         rootView.findViewById(R.id.iv_goods).setOnClickListener(this);
         return rootView;
     }
@@ -40,7 +41,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-        mCallback.onContentClickListener(v);
+//        旧的入口
+//        mCallback.onContentClickListener(v);
     }
 
     public interface ChangeContentListener {

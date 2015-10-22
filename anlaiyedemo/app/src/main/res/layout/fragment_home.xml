@@ -217,12 +217,14 @@
                 <!--ptr:ptrMode="both"-->
                 <!--/>-->
 
+                旧的入口
+
                 <ImageView
                     android:id="@+id/iv_goods"
                     android:layout_width="match_parent"
-                    android:src="@drawable/userinfo_pay_un"
                     android:layout_height="match_parent"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/iv_home_fragment"/>
 
                 <ImageView
                     android:id="@+id/iv_home_returntop"
@@ -233,7 +235,7 @@
                     android:layout_marginBottom="10.0dip"
                     android:layout_marginRight="10.0dip"
                     android:src="@drawable/homeview_return_top"
-                    android:visibility="visible"
+                    android:visibility="gone"
                     />
             </RelativeLayout>
         </LinearLayout>

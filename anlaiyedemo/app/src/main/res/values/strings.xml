@@ -569,4 +569,5 @@
     <string name="youdao">有道云笔记</string>
     <string name="title_activity_goods_detail">GoodsDetail</string>
     <string name="title_activity_fruit">Fruit</string>
+    <string name="title_activity_order">OrderActivity</string>
 </resources>

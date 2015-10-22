@@ -18,20 +18,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".GoodsDetailActivity"
-            android:label="@string/title_activity_goods_detail" >
-        </activity>
+        <!-- <activity -->
+        <!-- android:name=".GoodsDetailActivity" -->
+        <!-- android:label="@string/title_activity_goods_detail" > -->
+        <!-- </activity> -->
         <activity android:name=".RuleActivity" />
         <activity
-            android:name=".FruitActivity"
+            android:name=".WriteOrderActivity"
             android:label="@string/title_activity_fruit" >
         </activity>
-        <activity android:name=".ZeroPayActivity"/>
-        <activity android:name=".FreeRewardsActivity"/>
-        <activity android:name=".RewardsActivity"/>
-        <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity"/>
-        <activity android:name="com.jiandanlicai.yzhlibrary.RealNameActivity"/>
+        <activity android:name=".ZeroPayActivity" />
+        <activity android:name=".FreeRewardsActivity" />
+        <activity android:name=".RewardsActivity" />
+        <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity" />
+        <activity android:name="com.jiandanlicai.yzhlibrary.RealNameActivity" />
+        <activity
+            android:name=".ProfitActivity"
+            android:label="@string/title_activity_order" >
+        </activity>
     </application>
 
 </manifest>

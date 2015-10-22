@@ -4,9 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.View;
-import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
@@ -71,11 +69,12 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void onContentClickListener(View v) {
-        switch (v.getId()) {
-            case R.id.iv_goods:
-                startActivity(new Intent(this, GoodsDetailActivity.class));
-                break;
-        }
+//        todo 旧的首页入口舍弃
+//        switch (v.getId()) {
+//            case R.id.iv_goods:
+//                startActivity(new Intent(this, GoodsDetailActivity.class));
+//                break;
+//        }
     }
 
     @Override
@@ -86,31 +85,11 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void onViewClick(View view) {
-        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content);
-        if (fragment instanceof ShoppingCartFragment) {
-            ShoppingCartFragment scf = (ShoppingCartFragment) fragment;
-            if (scf.canClick) {
-                startActivityForResult(new Intent(this, FruitActivity.class), 888);
-            } else {
-                ImageView imageView = (ImageView) findViewById(R.id.iv_shopping_cart);
-                imageView.setImageResource(R.drawable.bg_shopping_cart_pre);
-                scf.canClick = true;
-            }
-        }
+        startActivity(new Intent(this, WriteOrderActivity.class));
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        Log.d("xxx", "resultCode: " + resultCode);
-        if (requestCode == 888 && resultCode == RESULT_OK) {
-//            Toast.makeText(this, "换图", Toast.LENGTH_LONG).show();
-            ImageView imageView = (ImageView) findViewById(R.id.iv_shopping_cart);
-            imageView.setImageResource(R.drawable.bg_shopping_cart);
-            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content);
-            if (fragment instanceof ShoppingCartFragment) {
-                ((ShoppingCartFragment) fragment).canClick = false;
-            }
-        }
     }
 }

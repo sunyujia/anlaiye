@@ -9,7 +9,9 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
+/**
+ * 旧的入口  舍弃，清单文件处已经去掉
+ */
 public class GoodsDetailActivity extends Activity implements View.OnClickListener {
 
     @Override

@@ -28,6 +28,7 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="horizontal"
+            android:gravity="center_vertical"
             >
 
             <ImageView
@@ -41,8 +42,8 @@
 
             <ImageView
                 android:id="@+id/home_title_personinfo"
-                android:layout_width="35.0dip"
-                android:layout_height="fill_parent"
+                android:layout_width="30.0dip"
+                android:layout_height="30.dp"
                 android:paddingRight="5.0dip"
                 android:src="@drawable/me_icon"
                 />

@@ -19,7 +19,7 @@
             android:layout_above="@+id/bottom"
             android:layout_below="@+id/title_goods_detail"
             android:scaleType="fitXY"
-            android:src="@drawable/bg_shopping_cart_pre"
+            android:src="@drawable/bg_shopping_cart"
             />
 
         <Button

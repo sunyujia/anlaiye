@@ -6,10 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.Toast;
 
-import com.jiandanlicai.yzhlibrary.RealNameActivity;
-
-public class FruitActivity extends Activity implements View.OnClickListener {
+public class WriteOrderActivity extends Activity implements View.OnClickListener {
 
     ImageView mImageView;
 
@@ -27,18 +26,15 @@ public class FruitActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
 //        todo 进入实名认证过程
-        Intent intent = new Intent(this, RealNameActivity.class);
-        intent.putExtra("from", "fruit");
-        startActivityForResult(intent, 1000);
+        Intent intent = new Intent(this, ProfitActivity.class);
+        startActivity(intent);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1000 && resultCode == RESULT_OK) {
-            setResult(RESULT_OK);
-            finish();
-//            mImageView.setImageResource();
+            Toast.makeText(this, "换图，显示已经领取", Toast.LENGTH_LONG).show();
         }
     }
 }
