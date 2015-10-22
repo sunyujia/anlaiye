@@ -29,7 +29,7 @@
                 android:layout_height="match_parent"
                 android:layout_below="@id/title_layout"
                 android:scaleType="fitXY"
-                android:src="@drawable/anyoujin_img"
+                android:src="@drawable/free_reward"
                 />
         <!--</LinearLayout>-->
     <!--</ScrollView>-->
