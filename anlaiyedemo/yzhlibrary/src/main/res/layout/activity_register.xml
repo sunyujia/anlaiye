@@ -16,15 +16,4 @@
         android:background="#efefef"
         />
 
-    <ImageView
-        android:id="@+id/iv_yzh_intro"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        android:src="@drawable/yzh_intro_img"
-        android:visibility="gone"
-        />
-
-    <include layout="@layout/yunzhanghu_navigation_layout"
-        />
 </LinearLayout>

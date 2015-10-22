@@ -27,14 +27,22 @@
             android:name=".WriteOrderActivity"
             android:label="@string/title_activity_fruit" >
         </activity>
+        <activity
+            android:name=".ProfitActivity"
+            android:label="@string/title_activity_order" >
+        </activity>
         <activity android:name=".ZeroPayActivity" />
         <activity android:name=".FreeRewardsActivity" />
         <activity android:name=".RewardsActivity" />
         <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity" />
-        <activity android:name="com.jiandanlicai.yzhlibrary.RealNameActivity" />
+        <activity android:name="com.jiandanlicai.yzhlibrary.RegisterActivity" />
         <activity
-            android:name=".ProfitActivity"
-            android:label="@string/title_activity_order" >
+            android:name=".OrderDetailActivity"
+            android:label="@string/title_activity_order_detail" >
+        </activity>
+        <activity
+            android:name=".ServiceActivity"
+            android:label="@string/title_activity_service" >
         </activity>
     </application>
 
