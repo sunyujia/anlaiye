@@ -7,7 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 
-import com.jiandanlicai.yzhlibrary.RealNameActivity;
+import com.jiandanlicai.yzhlibrary.RegisterActivity;
 
 public class FruitActivity extends Activity implements View.OnClickListener {
 
@@ -27,7 +27,7 @@ public class FruitActivity extends Activity implements View.OnClickListener {
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
 //        todo 进入实名认证过程
-        Intent intent = new Intent(this, RealNameActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         intent.putExtra("from", "fruit");
         startActivityForResult(intent, 1000);
     }

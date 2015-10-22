@@ -31,7 +31,7 @@
         <activity android:name=".FreeRewardsActivity"/>
         <activity android:name=".RewardsActivity"/>
         <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity"/>
-        <activity android:name="com.jiandanlicai.yzhlibrary.RealNameActivity"/>
+        <activity android:name="com.jiandanlicai.yzhlibrary.RegisterActivity"/>
     </application>
 
 </manifest>

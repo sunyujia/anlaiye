@@ -6,8 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
-import com.jiandanlicai.yzhlibrary.RealNameActivity;
-import com.jiandanlicai.yzhlibrary.YzhActivity;
+import com.jiandanlicai.yzhlibrary.RegisterActivity;
 
 /**
  * Created by yyyy on 15/10/20.
@@ -24,7 +23,7 @@ public class RuleActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 //        Toast.makeText(this, "开通", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, RealNameActivity.class);
+        Intent intent = new Intent(this, RegisterActivity.class);
         startActivityForResult(intent, 1002);
     }
 
