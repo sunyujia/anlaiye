@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/edit_text_corner_bg"
-    android:orientation="vertical">
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/edit_text_corner_bg"
+              android:orientation="vertical"
+    >
 
 
     <TextView
@@ -11,63 +12,70 @@
         android:layout_marginBottom="13dp"
         android:layout_marginTop="13dp"
         android:gravity="center"
-        android:text="提示"
-        android:textSize="16sp"></TextView>
+        android:text="温馨提示"
+        android:textSize="16sp"
+        />
 
     <ImageView
         style="@style/DividerStyle"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="15dp"
+        />
 
     <TextView
-        android:layout_width="108dp"
+        android:layout_width="140dp"
         android:layout_height="54dp"
         android:layout_gravity="center"
-        android:gravity="center_vertical"
         android:layout_marginBottom="19dp"
         android:layout_marginTop="19dp"
-        android:text="获得优惠券"
-         />
+        android:gravity="center_vertical"
+        android:text="您已获得50元挑食现金券,可用于支付时使用。现金券将于24小时内发放到您的挑食账户中，具体到账时间以实际为准。"
+        />
 
 
     <ImageView
         style="@style/DividerStyle"
         android:layout_marginLeft="15dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="15dp"
+        />
 
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        >
 
         <Button
-            android:id="@+id/btn_cancel"
+            android:id="@+id/btn_got_it"
             android:layout_width="0dp"
             android:layout_height="63dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
             android:gravity="center"
-            android:text="取消"
-            android:textSize="16sp" />
+            android:text="我知道了"
+            android:textSize="16sp"
+            />
 
         <View
             android:layout_width="1px"
             android:layout_height="35dp"
             android:layout_gravity="center"
-            android:background="#e6e6e6" />
+            android:background="#e6e6e6"
+            />
 
         <Button
-            android:id="@+id/btn_confirm"
+            android:id="@+id/btn_check_reward"
             android:layout_width="0dp"
             android:layout_height="63dp"
             android:layout_gravity="center"
             android:layout_weight="1"
             android:background="@null"
-            android:text="确定"
             android:gravity="center"
-            android:textSize="16sp" />
+            android:text="查看积分"
+            android:textSize="16sp"
+            />
     </LinearLayout>
 </LinearLayout>

@@ -9,14 +9,14 @@ import android.widget.ImageView;
 
 import com.jiandanlicai.yzhlibrary.R;
 
-public class Register3Fragment extends BaseFragment {
+public class BindCardFragment extends BaseFragment {
 
 
-    public static Register3Fragment newInstance() {
-        return new Register3Fragment();
+    public static BindCardFragment newInstance() {
+        return new BindCardFragment();
     }
 
-    public Register3Fragment() {
+    public BindCardFragment() {
         // Required empty public constructor
     }
 
@@ -36,8 +36,8 @@ public class Register3Fragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_register3, container, false);
-        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_register3);
+        View view = inflater.inflate(R.layout.fragment_bind_card, container, false);
+        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_bind_card);
         imageView.setOnClickListener(this);
         return view;
     }

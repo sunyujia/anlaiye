@@ -1,6 +1,6 @@
 package com.yunzhanghu.anlaiyedemo;
 
-import android.content.Intent;
+import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +16,10 @@ import android.widget.TextView;
  */
 public class ShoppingCartFragment extends Fragment implements View.OnClickListener {
 
+    private OnViewClickListener mCallback;
+
+    public boolean canClick = true;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -29,10 +33,26 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
         return view;
     }
 
+
+    @Override
+    public void onAttach(Context context) {
+        super.onAttach(context);
+        try {
+            mCallback = (OnViewClickListener) context;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(context.toString()
+                    + " must implement ChangeContentListener");
+        }
+    }
+
     @Override
     public void onClick(View v) {
-        if (getActivity() != null) {
-            getActivity().startActivity(new Intent(getActivity(), FruitActivity.class));
+        if (mCallback != null ) {
+            mCallback.onViewClick(v);
         }
+    }
+
+    public interface OnViewClickListener {
+        void onViewClick(View view);
     }
 }

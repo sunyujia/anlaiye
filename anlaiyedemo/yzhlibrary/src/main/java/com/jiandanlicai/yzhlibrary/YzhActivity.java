@@ -20,8 +20,8 @@ import com.jiandanlicai.yzhlibrary.fragment.BuyTwoFragment;
 import com.jiandanlicai.yzhlibrary.fragment.FinancingDetailFragment;
 import com.jiandanlicai.yzhlibrary.fragment.FinancingFragment;
 import com.jiandanlicai.yzhlibrary.fragment.PersonalFragment;
-import com.jiandanlicai.yzhlibrary.fragment.Register2Fragment;
-import com.jiandanlicai.yzhlibrary.fragment.Register3Fragment;
+import com.jiandanlicai.yzhlibrary.fragment.PayPwdFragment;
+import com.jiandanlicai.yzhlibrary.fragment.BindCardFragment;
 import com.jiandanlicai.yzhlibrary.fragment.RegisterFragment;
 import com.jiandanlicai.yzhlibrary.fragment.YzhFragment;
 
@@ -92,27 +92,36 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
             } else {//未登录
                 fragment = RegisterFragment.newInstance();
             }
-        } else if (i == R.id.iv_content_register1) {
-            fragment = Register2Fragment.newInstance();
-        } else if (i == R.id.iv_content_register2) {
-            fragment = Register3Fragment.newInstance();
-        } else if (i == R.id.iv_content_register3) {
+        } else if (i == R.id.iv_content_register) {
+            fragment = PayPwdFragment.newInstance();
+        } else if (i == R.id.iv_content_pay_pwd) {
+            fragment = BindCardFragment.newInstance();
+        } else if (i == R.id.iv_content_bind_card) {
             MyApplication.sIsLogin = true;
-            if (mFromFlag == 0) {
+            if (mFromFlag == 4) {
+                fragment = BuyOneFragment.newInstance();
+            } else if (mFromFlag == 0) {
                 fragment = YzhFragment.newInstance(true);
             } else {
                 fragment = FinancingFragment.newInstance();
             }
         } else if (i == R.id.btn_buy) {
-            fragment = BuyOneFragment.newInstance();
+            if (mFromFlag == 4 && !MyApplication.sIsLogin) {
+                fragment = PayPwdFragment.newInstance();
+            } else {
+                fragment = BuyOneFragment.newInstance();
+            }
         } else if (i == R.id.iv_content_buy) {
             fragment = BuyTwoFragment.newInstance();
         } else if (i == R.id.iv_content_buy2) {
+            fragment = BuyThreeFragment.newInstance();
             if (mFromFlag == 3) {
                 //弹出对话框
-                showDialog();
+                showRewardDialog();
             }
-            fragment = BuyThreeFragment.newInstance();
+            if (mFromFlag == 4) {
+                showCashDialog();
+            }
         } else if (i == R.id.iv_content_buy3) {
             if (mFromFlag == 3) {
                 setResult(RESULT_OK);
@@ -121,9 +130,12 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
                 mRB.setChecked(true);
             }
             fragment = YzhFragment.newInstance(MyApplication.sIsLogin);
+            mFromFlag = 0;
         } else if (i == R.id.iv_content_financing) {
             mTabTag = 2;
-            if (!MyApplication.sIsLogin) {
+            if (mFromFlag == 4) {
+                fragment = FinancingDetailFragment.newInstance();
+            } else if (!MyApplication.sIsLogin) {
                 fragment = RegisterFragment.newInstance();
             } else {
                 fragment = FinancingDetailFragment.newInstance();
@@ -134,11 +146,11 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
         }
     }
 
-    private void showDialog() {
+    private void showCashDialog() {
         final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
         dialog.show();
         View rootView = LayoutInflater.from(this).inflate(
-                R.layout.tip_dialog, null);
+                R.layout.cash_dialog, null);
         WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
         int screenWidth = getScreenWidth(this);
         float width = screenWidth * 0.9f;
@@ -146,14 +158,42 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
         params.height = dip2px(this, 185);
         dialog.getWindow().setAttributes(params);
         dialog.setContentView(rootView);
-        dialog.findViewById(R.id.btn_confirm).setOnClickListener(new View.OnClickListener() {
+        dialog.findViewById(R.id.btn_return_detail).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                dialog.dismiss();
+                finish();
+            }
+        });
+        dialog.findViewById(R.id.btn_i_know).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
+    }
+
+    private void showRewardDialog() {
+        final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
+        dialog.show();
+        View rootView = LayoutInflater.from(this).inflate(
+                R.layout.reward_dialog, null);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        int screenWidth = getScreenWidth(this);
+        float width = screenWidth * 0.9f;
+        params.width = (int) width;
+        params.height = dip2px(this, 185);
+        dialog.getWindow().setAttributes(params);
+        dialog.setContentView(rootView);
+        dialog.findViewById(R.id.btn_check_reward).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
                 finish();
             }
         });
-        dialog.findViewById(R.id.btn_cancel).setOnClickListener(new View.OnClickListener() {
+        dialog.findViewById(R.id.btn_got_it).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();

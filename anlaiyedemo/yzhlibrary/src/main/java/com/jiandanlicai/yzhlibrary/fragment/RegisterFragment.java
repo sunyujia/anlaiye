@@ -37,7 +37,7 @@ public class RegisterFragment extends BaseFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
-        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_register1);
+        ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_register);
         imageView.setOnClickListener(this);
         return view;
     }

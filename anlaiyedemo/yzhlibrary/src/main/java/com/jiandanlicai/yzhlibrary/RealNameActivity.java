@@ -2,27 +2,28 @@ package com.jiandanlicai.yzhlibrary;
 
 import android.app.Dialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
+import android.text.TextUtils;
 import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 
-import com.jiandanlicai.yzhlibrary.MyApplication;
-import com.jiandanlicai.yzhlibrary.OnViewClickListener;
-import com.jiandanlicai.yzhlibrary.R;
-import com.jiandanlicai.yzhlibrary.fragment.Register2Fragment;
-import com.jiandanlicai.yzhlibrary.fragment.Register3Fragment;
 import com.jiandanlicai.yzhlibrary.fragment.RegisterFragment;
 
 public class RealNameActivity extends FragmentActivity implements OnViewClickListener {
 
+    private String mFlagStr;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_real_name);
+        mFlagStr = getIntent().getStringExtra("from");
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content, RegisterFragment.newInstance()).commit();
         }
@@ -30,26 +31,22 @@ public class RealNameActivity extends FragmentActivity implements OnViewClickLis
 
     @Override
     public void onViewClick(View view) {
-        Fragment fragment = null;
         int i = view.getId();
-        if (i == R.id.iv_content_register1) {
-            fragment = Register2Fragment.newInstance();
-        } else if (i == R.id.iv_content_register2) {
-            fragment = Register3Fragment.newInstance();
-        } else if (i == R.id.iv_content_register3) {
-            showDialog();
-        }
-        if (fragment != null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, fragment).commit();
+        if (i == R.id.iv_content_register) {
+            if (!TextUtils.isEmpty(mFlagStr) && mFlagStr.equals("fruit")) {
+                returnCartDialog();
+            } else {
+                showInvestDialog();
+            }
         }
     }
 
 
-    private void showDialog() {
+    private void returnCartDialog() {
         final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
         dialog.show();
         View rootView = LayoutInflater.from(this).inflate(
-                R.layout.tip_dialog, null);
+                R.layout.fruit_dialog, null);
         WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
         int screenWidth = getScreenWidth(this);
         float width = screenWidth * 0.9f;
@@ -57,19 +54,54 @@ public class RealNameActivity extends FragmentActivity implements OnViewClickLis
         params.height = dip2px(this, 185);
         dialog.getWindow().setAttributes(params);
         dialog.setContentView(rootView);
-        dialog.findViewById(R.id.btn_confirm).setOnClickListener(new View.OnClickListener() {
+        dialog.findViewById(R.id.btn_return_cart).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 setResult(RESULT_OK);
+                dialog.dismiss();
                 finish();
             }
         });
-        dialog.findViewById(R.id.btn_cancel).setOnClickListener(new View.OnClickListener() {
+    }
+
+    private void showInvestDialog() {
+        final Dialog dialog = new Dialog(this, R.style.MyDialogStyle);
+        dialog.show();
+        View rootView = LayoutInflater.from(this).inflate(
+                R.layout.invest_dialog, null);
+        WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+        int screenWidth = getScreenWidth(this);
+        float width = screenWidth * 0.9f;
+        params.width = (int) width;
+        params.height = dip2px(this, 185);
+        dialog.getWindow().setAttributes(params);
+        dialog.setContentView(rootView);
+        dialog.findViewById(R.id.btn_invest).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                Intent intent = new Intent(RealNameActivity.this, YzhActivity.class);
+                intent.putExtra("from", 4);
+                startActivityForResult(intent, 10001);
             }
         });
+        dialog.findViewById(R.id.btn_return_cart).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setResult(RESULT_OK);
+                dialog.dismiss();
+                finish();
+            }
+        });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 10001) {
+            setResult(RESULT_OK);
+            finish();
+        }
     }
 
     /**

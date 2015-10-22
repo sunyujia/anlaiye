@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class GoodsDetailActivity extends Activity implements View.OnClickListener {
@@ -34,7 +35,7 @@ public class GoodsDetailActivity extends Activity implements View.OnClickListene
                 onBackPressed();
                 break;
             case R.id.iv_goods_detail:
-                startActivity(new Intent(this, RuleActivity.class));
+                startActivityForResult(new Intent(this, RuleActivity.class), 100001);
                 break;
             case R.id.btn_left:
                 break;
@@ -43,6 +44,14 @@ public class GoodsDetailActivity extends Activity implements View.OnClickListene
                 startActivity(new Intent(this, MainActivity.class));
                 finish();
                 break;
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if (requestCode == 100001) {
+            Toast.makeText(this, "立减6元置灰", Toast.LENGTH_SHORT).show();
         }
     }
 }

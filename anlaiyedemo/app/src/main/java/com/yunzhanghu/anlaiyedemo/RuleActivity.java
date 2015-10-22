@@ -4,7 +4,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 
+import com.jiandanlicai.yzhlibrary.RealNameActivity;
 import com.jiandanlicai.yzhlibrary.YzhActivity;
 
 /**
@@ -14,6 +16,7 @@ public class RuleActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_rule);
         findViewById(R.id.btn_oepn).setOnClickListener(this);
     }
@@ -21,8 +24,7 @@ public class RuleActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
 //        Toast.makeText(this, "开通", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, YzhActivity.class);
-        intent.putExtra("from", 3);
+        Intent intent = new Intent(this, RealNameActivity.class);
         startActivityForResult(intent, 1002);
     }
 
@@ -30,6 +32,7 @@ public class RuleActivity extends Activity implements View.OnClickListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == 1002) {
+            setResult(RESULT_OK);
             finish();
         }
     }
