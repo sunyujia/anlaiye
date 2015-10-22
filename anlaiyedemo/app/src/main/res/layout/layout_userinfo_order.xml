@@ -3,6 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:clickable="true"
     android:orientation="vertical"
     >
 
@@ -32,7 +33,6 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:clickable="true"
             android:drawablePadding="8.0dip"
             android:drawableRight="@drawable/arrowx"
             android:gravity="center_vertical"
@@ -44,6 +44,7 @@
     <View style="@style/common_line_style"/>
 
     <LinearLayout
+        android:id="@+id/order_linear_layout"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/white"
@@ -128,7 +129,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1.0"
-            android:clickable="true"
             android:gravity="center"
             >
 
@@ -163,7 +163,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1.0"
-            android:clickable="true"
             android:gravity="center"
             >
 
@@ -198,7 +197,6 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_weight="1.0"
-            android:clickable="true"
             android:gravity="center"
             >
 

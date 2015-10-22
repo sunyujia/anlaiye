@@ -24,12 +24,12 @@
             <!-->-->
 
             <ImageView
-                android:id="@+id/iv_content_money"
+                android:id="@+id/iv_content_order"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@id/title_layout"
                 android:scaleType="fitXY"
-                android:src="@drawable/anyoujin_img"
+                android:src="@drawable/my_mission_img"
                 />
         <!--</LinearLayout>-->
     <!--</ScrollView>-->

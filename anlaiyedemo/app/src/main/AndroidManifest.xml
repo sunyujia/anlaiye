@@ -28,8 +28,8 @@
             android:label="@string/title_activity_fruit" >
         </activity>
         <activity android:name=".ZeroPayActivity"/>
-        <activity android:name=".FreeRewardsActivity"/>
-        <activity android:name=".RewardsActivity"/>
+        <activity android:name=".FreeServiceActivity"/>
+        <activity android:name=".MyOrderActivity"/>
         <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity"/>
         <activity android:name="com.jiandanlicai.yzhlibrary.RegisterActivity"/>
     </application>

@@ -40,7 +40,7 @@ public class RegisterActivity extends FragmentActivity implements OnViewClickLis
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 10001) {
+        if (requestCode == 10000) {
             setResult(RESULT_OK);
             finish();
         }

@@ -9,6 +9,7 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jiandanlicai.yzhlibrary.fragment.BindCardFragment;
 import com.jiandanlicai.yzhlibrary.fragment.BuyOneFragment;
@@ -42,6 +43,7 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
         TextView tvBack = (TextView) findViewById(R.id.tv_back);
         tvBack.setOnClickListener(this);
         mIvIntro = (ImageView) findViewById(R.id.iv_yzh_intro);
+        mIvIntro.setOnClickListener(this);
         if (savedInstanceState == null) {
             MyApplication.sIsLogin = false;
             if (mFromFlag == GO_TO_YZH) {
@@ -107,11 +109,16 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
             fragment = BuyTwoFragment.newInstance();
         } else if (i == R.id.iv_content_buy2) {
             fragment = BuyThreeFragment.newInstance();
+            if (mFromFlag == 2) {
+                Utils.showCashDialog(this, "恭喜您已获得4次减免服务费资格，可在结算时自动使用");
+            }
         } else if (i == R.id.iv_content_buy3) {
             fragment = YzhFragment.newInstance(MyApplication.sIsLogin);
             mFromFlag = 0;
         } else if (i == R.id.iv_content_financing) {
             fragment = FinancingDetailFragment.newInstance();
+        } else if (i == R.id.iv_yzh_intro) {
+            mIvIntro.setVisibility(View.GONE);
         }
         if (fragment != null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.main_content, fragment).commit();

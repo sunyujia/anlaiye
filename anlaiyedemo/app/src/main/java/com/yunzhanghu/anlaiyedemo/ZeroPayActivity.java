@@ -18,7 +18,7 @@ public class ZeroPayActivity extends FragmentActivity implements View.OnClickLis
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
-        setContentView(R.layout.activity_zero_pay);
+        setContentView(R.layout.activity_free_service);
         ImageView ivBack = (ImageView) findViewById(R.id.iv_return);
         ImageView ivContent = (ImageView) findViewById(iv_content_money);
         TextView tvTitle = (TextView) findViewById(R.id.tv_title);

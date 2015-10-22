@@ -7,12 +7,13 @@ import android.util.DisplayMetrics;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.TextView;
 
 /**
  * Created by max on 15/10/22.
  */
 public class Utils {
-    public static void showCashDialog(Activity context, String msg) {
+    public static void showCashDialog(final Activity context, String msg) {
         final Dialog dialog = new Dialog(context, R.style.MyDialogStyle);
         dialog.show();
         View rootView = LayoutInflater.from(context).inflate(
@@ -24,16 +25,14 @@ public class Utils {
         params.height = dip2px(context, 185);
         dialog.getWindow().setAttributes(params);
         dialog.setContentView(rootView);
-        dialog.findViewById(R.id.btn_return_detail).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dialog.dismiss();
-            }
-        });
+        TextView textView = (TextView) dialog.findViewById(R.id.tv_dialog_content);
+        textView.setText(msg);
         dialog.findViewById(R.id.btn_i_know).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dialog.dismiss();
+                context.setResult(Activity.RESULT_OK);
+                context.finish();
             }
         });
     }
