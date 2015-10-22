@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.jiandanlicai.yzhlibrary.RealNameActivity;
 
@@ -36,7 +35,7 @@ public class FruitActivity extends Activity implements View.OnClickListener {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1000) {
+        if (requestCode == 1000 && resultCode == RESULT_OK) {
             setResult(RESULT_OK);
             finish();
 //            mImageView.setImageResource();

@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
               android:layout_width="match_parent"
-              android:layout_height="match_parent">
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
     <include
         android:id="@+id/title_shopping_cart"
         layout="@layout/title_layout"></include>
@@ -10,18 +11,20 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
+
         <ImageView
+            android:id="@+id/iv_shopping_cart"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_above="@+id/bottom"
             android:layout_below="@+id/title_goods_detail"
             android:scaleType="fitXY"
-            android:src="@drawable/userinfo_pay_un"
+            android:src="@drawable/bg_shopping_cart_pre"
             />
 
         <Button
             android:id="@+id/btn_oepn"
-            android:layout_width="100dp"
+            android:layout_width="match_parent"
             android:layout_height="30dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="50dp"

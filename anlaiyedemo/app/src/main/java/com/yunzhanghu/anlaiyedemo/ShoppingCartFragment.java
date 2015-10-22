@@ -1,8 +1,6 @@
 package com.yunzhanghu.anlaiyedemo;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -12,8 +10,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.jiandanlicai.yzhlibrary.OnViewClickListener;
-
 
 /**
  * Created by yyyy on 15/10/20.
@@ -21,6 +17,8 @@ import com.jiandanlicai.yzhlibrary.OnViewClickListener;
 public class ShoppingCartFragment extends Fragment implements View.OnClickListener {
 
     private OnViewClickListener mCallback;
+
+    public boolean canClick = true;
 
     @Nullable
     @Override
@@ -49,7 +47,7 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (mCallback != null) {
+        if (mCallback != null ) {
             mCallback.onViewClick(v);
         }
     }

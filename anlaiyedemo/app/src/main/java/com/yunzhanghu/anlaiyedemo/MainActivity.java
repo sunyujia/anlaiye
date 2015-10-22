@@ -4,14 +4,14 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
+import android.util.Log;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
 import com.jeremyfeinstein.slidingmenu.lib.app.SlidingFragmentActivity;
-
-import java.util.IllegalFormatCodePointException;
 
 public class MainActivity extends SlidingFragmentActivity implements MenuFragment.SLMenuListOnItemClickListener, HomeFragment.ChangeContentListener, ShoppingCartFragment.OnViewClickListener {
 
@@ -86,14 +86,31 @@ public class MainActivity extends SlidingFragmentActivity implements MenuFragmen
 
     @Override
     public void onViewClick(View view) {
-        startActivityForResult(new Intent(this, FruitActivity.class), 888);
+        Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content);
+        if (fragment instanceof ShoppingCartFragment) {
+            ShoppingCartFragment scf = (ShoppingCartFragment) fragment;
+            if (scf.canClick) {
+                startActivityForResult(new Intent(this, FruitActivity.class), 888);
+            } else {
+                ImageView imageView = (ImageView) findViewById(R.id.iv_shopping_cart);
+                imageView.setImageResource(R.drawable.bg_shopping_cart_pre);
+                scf.canClick = true;
+            }
+        }
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 888) {
-            Toast.makeText(this, "换图", Toast.LENGTH_LONG).show();
+        Log.d("xxx", "resultCode: " + resultCode);
+        if (requestCode == 888 && resultCode == RESULT_OK) {
+//            Toast.makeText(this, "换图", Toast.LENGTH_LONG).show();
+            ImageView imageView = (ImageView) findViewById(R.id.iv_shopping_cart);
+            imageView.setImageResource(R.drawable.bg_shopping_cart);
+            Fragment fragment = getSupportFragmentManager().findFragmentById(R.id.content);
+            if (fragment instanceof ShoppingCartFragment) {
+                ((ShoppingCartFragment) fragment).canClick = false;
+            }
         }
     }
 }
