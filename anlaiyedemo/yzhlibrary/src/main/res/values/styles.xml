@@ -8,7 +8,7 @@
     <style name="DividerStyle">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">1px</item>
-        <item name="android:background">@color/white_bg_color</item>
+        <item name="android:background">@color/dialog_item_title_color</item>
     </style>
 
     <style name="MyDialogStyle">

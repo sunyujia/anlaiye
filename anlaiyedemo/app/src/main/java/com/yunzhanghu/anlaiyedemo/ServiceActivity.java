@@ -23,14 +23,14 @@ public class ServiceActivity extends Activity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Intent intent = new Intent(this, RegisterActivity.class);
-        intent.putExtra(RegisterActivity.EXTRA_REGISTER, RegisterActivity.EXTRA_REGISTER);
+        intent.putExtra(RegisterActivity.EXTRA_REGISTER, RegisterActivity.EXTRA_BIND_CARD);
         startActivityForResult(intent, RegisterActivity.REQUEST_CODE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 2000 && resultCode == RESULT_OK) {
+        if (requestCode == RegisterActivity.REQUEST_CODE && resultCode == RESULT_OK) {
             setResult(resultCode);
             finish();
         }

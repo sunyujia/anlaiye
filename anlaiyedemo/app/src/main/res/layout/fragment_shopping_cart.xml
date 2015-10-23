@@ -24,9 +24,10 @@
 
         <Button
             android:id="@+id/btn_oepn"
-            android:layout_width="match_parent"
-            android:layout_height="80dp"
-            android:layout_alignParentTop="true"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
             android:layout_marginTop="50dp"
             android:background="@null"/>
 

@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 
+import com.jiandanlicai.yzhlibrary.RegisterActivity;
+
 public class ProfitActivity extends Activity implements View.OnClickListener {
 
     @Override
@@ -19,17 +21,15 @@ public class ProfitActivity extends Activity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
-//        Intent intent = new Intent(this, RegisterActivity.class);
-//        intent.putExtra(RegisterActivity.EXTRA_REGISTER, RegisterActivity.EXTRA_REGISTER);
-//        startActivityForResult(intent, RegisterActivity.REQUEST_CODE);
-        startActivity(new Intent(this, OrderDetailActivity.class));
-
+        Intent intent = new Intent(this, RegisterActivity.class);
+        intent.putExtra(RegisterActivity.EXTRA_REGISTER, RegisterActivity.EXTRA_REGISTER);
+        startActivityForResult(intent, RegisterActivity.REQUEST_CODE);
     }
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 1000 && resultCode == RESULT_OK) {
+        if (requestCode == RegisterActivity.REQUEST_CODE && resultCode == RESULT_OK) {
             setResult(resultCode);
             finish();
         }

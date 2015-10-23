@@ -892,10 +892,11 @@
                 />
 
             <LinearLayout
-                android:id="@+id/icon_parent14"
+                android:id="@+id/layout_anlaiye_financial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
+                android:clickable="true"
                 android:gravity="center"
                 android:orientation="vertical"
                 >
@@ -904,6 +905,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
+                    android:src="@drawable/anlaiye_financial"
                     />
 
                 <TextView
@@ -911,6 +913,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
+                    android:text="俺的金融"
                     />
             </LinearLayout>
 
@@ -926,8 +929,8 @@
 
             <TextView
                 style="@style/common_cirlce_number_style"
-                android:layout_alignRight="@id/icon_parent14"
-                android:layout_alignTop="@id/icon_parent14"
+                android:layout_alignRight="@id/layout_anlaiye_financial"
+                android:layout_alignTop="@id/layout_anlaiye_financial"
                 android:text="10"
                 android:visibility="visible"
                 />

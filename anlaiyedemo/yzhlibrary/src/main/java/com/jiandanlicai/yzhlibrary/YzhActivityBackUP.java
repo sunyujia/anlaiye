@@ -1,4 +1,4 @@
-package com.jiandanlicai.yzhlibrary.fragment;
+package com.jiandanlicai.yzhlibrary;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -14,9 +14,16 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import com.jiandanlicai.yzhlibrary.MyApplication;
-import com.jiandanlicai.yzhlibrary.OnViewClickListener;
-import com.jiandanlicai.yzhlibrary.R;
+import com.jiandanlicai.yzhlibrary.fragment.BindCardFragment;
+import com.jiandanlicai.yzhlibrary.fragment.BuyOneFragment;
+import com.jiandanlicai.yzhlibrary.fragment.BuyThreeFragment;
+import com.jiandanlicai.yzhlibrary.fragment.BuyTwoFragment;
+import com.jiandanlicai.yzhlibrary.fragment.FinancingDetailFragment;
+import com.jiandanlicai.yzhlibrary.fragment.FinancingFragment;
+import com.jiandanlicai.yzhlibrary.fragment.PayPwdFragment;
+import com.jiandanlicai.yzhlibrary.fragment.PersonalFragment;
+import com.jiandanlicai.yzhlibrary.fragment.RegisterFragment;
+import com.jiandanlicai.yzhlibrary.fragment.YzhFragment;
 
 public class YzhActivityBackUP extends FragmentActivity implements View.OnClickListener, OnViewClickListener {
 
@@ -151,14 +158,14 @@ public class YzhActivityBackUP extends FragmentActivity implements View.OnClickL
         params.height = dip2px(this, 185);
         dialog.getWindow().setAttributes(params);
         dialog.setContentView(rootView);
-        dialog.findViewById(R.id.btn_return_detail).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                setResult(RESULT_OK);
-                dialog.dismiss();
-                finish();
-            }
-        });
+//        dialog.findViewById(R.id.btn_return_detail).setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                setResult(RESULT_OK);
+//                dialog.dismiss();
+//                finish();
+//            }
+//        });
         dialog.findViewById(R.id.btn_i_know).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

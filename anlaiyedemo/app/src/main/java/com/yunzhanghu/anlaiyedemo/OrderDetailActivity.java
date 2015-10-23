@@ -17,6 +17,7 @@ public class OrderDetailActivity extends Activity implements View.OnClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_detail);
         findViewById(R.id.btn_oepn).setOnClickListener(this);
+        findViewById(R.id.iv_return).setOnClickListener(this);
         mImageView = (ImageView) findViewById(R.id.bg);
         TextView tv = (TextView) findViewById(R.id.tv_title);
         tv.setText("订单详情");
@@ -26,8 +27,16 @@ public class OrderDetailActivity extends Activity implements View.OnClickListene
     @Override
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, ServiceActivity.class);
-        startActivityForResult(intent, 2000);
+        switch (v.getId()) {
+            case R.id.iv_return:
+                onBackPressed();
+                break;
+            case R.id.btn_oepn:
+                Intent intent = new Intent(this, ServiceActivity.class);
+                startActivityForResult(intent, 2000);                                                                             ````````````````
+                break;
+        }
+
     }
 
     @Override

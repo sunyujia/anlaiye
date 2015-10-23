@@ -195,7 +195,6 @@
             >
 
             <include
-                android:id="@+id/payorder_layout"
                 layout="@layout/layout_userinfo_order"
                 />
 

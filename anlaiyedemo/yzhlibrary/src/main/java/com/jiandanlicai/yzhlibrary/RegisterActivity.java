@@ -7,6 +7,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.view.Window;
 
+import com.jiandanlicai.yzhlibrary.fragment.BindCardFragment;
 import com.jiandanlicai.yzhlibrary.fragment.RegisterFragment;
 
 public class RegisterActivity extends FragmentActivity implements OnViewClickListener {
@@ -14,6 +15,8 @@ public class RegisterActivity extends FragmentActivity implements OnViewClickLis
     private String mFlagStr;
 
     public static final String EXTRA_REGISTER = "register";
+
+    public static final String EXTRA_BIND_CARD = "bind";
 
     public static final int REQUEST_CODE = 10000;
 
@@ -33,8 +36,12 @@ public class RegisterActivity extends FragmentActivity implements OnViewClickLis
         int i = view.getId();
         if (i == R.id.iv_content_register) {
             if (!TextUtils.isEmpty(mFlagStr) && mFlagStr.equals(EXTRA_REGISTER)) {
-                Utils.showCashDialog(this, "");
+                Utils.showCashDialog(this, "恭喜您已获得俺来也6元优惠券，提交订单即可使用");
+            } else {
+                getSupportFragmentManager().beginTransaction().replace(R.id.main_content, BindCardFragment.newInstance()).commit();
             }
+        } else {
+            Utils.showCashDialog(this, "恭喜您已获得2次减免服务费资格，可在结算时自动使用");
         }
     }
 
@@ -42,7 +49,7 @@ public class RegisterActivity extends FragmentActivity implements OnViewClickLis
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
-        if (requestCode == 10001) {
+        if (requestCode == REQUEST_CODE) {
             setResult(RESULT_OK);
             finish();
         }

@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class WriteOrderActivity extends Activity implements View.OnClickListener {
 
@@ -19,6 +18,7 @@ public class WriteOrderActivity extends Activity implements View.OnClickListener
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fruit);
+        findViewById(R.id.iv_return).setOnClickListener(this);
         findViewById(R.id.btn_oepn).setOnClickListener(this);
         mImageView = (ImageView) findViewById(R.id.bg);
         TextView tv = (TextView) findViewById(R.id.tv_title);
@@ -29,8 +29,16 @@ public class WriteOrderActivity extends Activity implements View.OnClickListener
     @Override
     public void onClick(View v) {
 //        Toast.makeText(this, "进入云账户", Toast.LENGTH_LONG).show();
-        Intent intent = new Intent(this, ProfitActivity.class);
-        startActivityForResult(intent, 1000);
+        switch (v.getId()) {
+            case R.id.btn_oepn:
+                Intent intent = new Intent(this, ProfitActivity.class);
+                startActivityForResult(intent, 1000);
+                break;
+            case R.id.iv_return:
+                onBackPressed();
+                break;
+        }
+
     }
 
     @Override

@@ -32,8 +32,6 @@
             android:label="@string/title_activity_order" >
         </activity>
         <activity android:name=".ZeroPayActivity" />
-        <activity android:name=".FreeRewardsActivity" />
-        <activity android:name=".RewardsActivity" />
         <activity android:name="com.jiandanlicai.yzhlibrary.YzhActivity" />
         <activity android:name="com.jiandanlicai.yzhlibrary.RegisterActivity" />
         <activity
@@ -44,6 +42,8 @@
             android:name=".ServiceActivity"
             android:label="@string/title_activity_service" >
         </activity>
+        <activity android:name=".FreeServiceActivity"/>
+        <activity android:name=".MyOrderActivity"/>
     </application>
 
 </manifest>
