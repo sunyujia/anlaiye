@@ -26,8 +26,14 @@ public class RegisterActivity extends FragmentActivity implements OnViewClickLis
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_register);
         mFlagStr = getIntent().getStringExtra(EXTRA_REGISTER);
+        int fromFlag;
+        if (!TextUtils.isEmpty(mFlagStr) && mFlagStr.equals(EXTRA_REGISTER)) {
+            fromFlag = 1;//没有进度的图片
+        } else {
+            fromFlag = 0;//有进度的图片
+        }
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, RegisterFragment.newInstance()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, RegisterFragment.newInstance(fromFlag)).commit();
         }
     }
 

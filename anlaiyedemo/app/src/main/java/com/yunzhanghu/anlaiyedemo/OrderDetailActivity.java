@@ -33,7 +33,7 @@ public class OrderDetailActivity extends Activity implements View.OnClickListene
                 break;
             case R.id.btn_oepn:
                 Intent intent = new Intent(this, ServiceActivity.class);
-                startActivityForResult(intent, 2000);                                                                             ````````````````
+                startActivityForResult(intent, 2000);
                 break;
         }
 

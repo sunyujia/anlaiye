@@ -29,6 +29,8 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
         ImageView imageView = (ImageView) view.findViewById(R.id.home_title_personinfo);
         imageView.setImageResource(R.drawable.shopcar_delete_icon);
         view.findViewById(R.id.home_title_right).setVisibility(View.VISIBLE);
+        ImageView ivReturn = (ImageView) view.findViewById(R.id.iv_return);
+        ivReturn.setVisibility(View.INVISIBLE);
         tv.setText("购物车");
         return view;
     }
@@ -47,7 +49,7 @@ public class ShoppingCartFragment extends Fragment implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        if (mCallback != null ) {
+        if (mCallback != null) {
             mCallback.onViewClick(v);
         }
     }

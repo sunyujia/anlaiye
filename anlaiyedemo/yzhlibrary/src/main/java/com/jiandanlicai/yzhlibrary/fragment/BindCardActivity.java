@@ -25,7 +25,7 @@ public class BindCardActivity extends FragmentActivity implements OnViewClickLis
         getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_bind_bank);
         if (savedInstanceState == null) {
-            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, RegisterFragment.newInstance()).commit();
+            getSupportFragmentManager().beginTransaction().replace(R.id.main_content, RegisterFragment.newInstance(0)).commit();
         }
     }
 
