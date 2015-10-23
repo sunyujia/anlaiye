@@ -102,7 +102,7 @@ public class YzhActivity extends FragmentActivity implements View.OnClickListene
             if (MyApplication.sIsLogin) {
                 fragment = BuyOneFragment.newInstance();
             } else {
-                fragment = RegisterFragment.newInstance();
+                fragment = RegisterFragment.newInstance(0);
             }
         } else if (i == R.id.iv_content_buy) {
             fragment = BuyTwoFragment.newInstance();

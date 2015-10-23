@@ -626,10 +626,12 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/layout_anlaiye_financial"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@color/white"
+            android:clickable="true"
             android:gravity="center"
             android:orientation="vertical"
             >
@@ -648,13 +650,13 @@
                 android:layout_centerInParent="true"
                 android:gravity="center"
                 android:orientation="vertical"
-                android:visibility="gone"
                 >
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
+                    android:src="@drawable/anlaiye_financial"
                     />
 
                 <TextView
@@ -662,7 +664,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
-                    android:text="俺理财"
+                    android:text="俺的金融"
                     />
             </LinearLayout>
 
@@ -892,7 +894,6 @@
                 />
 
             <LinearLayout
-                android:id="@+id/layout_anlaiye_financial"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
@@ -905,7 +906,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:minHeight="50.0dip"
-                    android:src="@drawable/anlaiye_financial"
                     />
 
                 <TextView
@@ -913,7 +913,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="5.0dip"
-                    android:text="俺的金融"
                     />
             </LinearLayout>
 

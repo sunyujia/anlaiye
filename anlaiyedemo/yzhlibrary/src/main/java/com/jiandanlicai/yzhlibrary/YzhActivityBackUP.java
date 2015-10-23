@@ -90,7 +90,7 @@ public class YzhActivityBackUP extends FragmentActivity implements View.OnClickL
             if (MyApplication.sIsLogin) {//已登录
                 fragment = FinancingDetailFragment.newInstance();
             } else {//未登录
-                fragment = RegisterFragment.newInstance();
+                fragment = RegisterFragment.newInstance(0);
             }
         } else if (i == R.id.iv_content_register) {
             fragment = PayPwdFragment.newInstance();
@@ -136,7 +136,7 @@ public class YzhActivityBackUP extends FragmentActivity implements View.OnClickL
             if (mFromFlag == 4) {
                 fragment = FinancingDetailFragment.newInstance();
             } else if (!MyApplication.sIsLogin) {
-                fragment = RegisterFragment.newInstance();
+                fragment = RegisterFragment.newInstance(0);
             } else {
                 fragment = FinancingDetailFragment.newInstance();
             }

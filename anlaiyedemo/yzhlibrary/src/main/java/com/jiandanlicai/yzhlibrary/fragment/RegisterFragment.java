@@ -11,9 +11,14 @@ import com.jiandanlicai.yzhlibrary.R;
 
 public class RegisterFragment extends BaseFragment {
 
+    private int mFromFlag;
 
-    public static RegisterFragment newInstance() {
-        return new RegisterFragment();
+    public static RegisterFragment newInstance(int fromFlag) {
+        RegisterFragment fragment = new RegisterFragment();
+        Bundle bundle = new Bundle();
+        bundle.putInt("flag", fromFlag);
+        fragment.setArguments(bundle);
+        return fragment;
     }
 
     public RegisterFragment() {
@@ -30,6 +35,9 @@ public class RegisterFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        if (getArguments() != null) {
+            mFromFlag = getArguments().getInt("flag");
+        }
     }
 
 
@@ -38,6 +46,11 @@ public class RegisterFragment extends BaseFragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_register, container, false);
         ImageView imageView = (ImageView) view.findViewById(R.id.iv_content_register);
+        if (mFromFlag == 1) {
+            imageView.setImageResource(R.drawable.register_1_no);
+        } else {
+            imageView.setImageResource(R.drawable.register_1);
+        }
         imageView.setOnClickListener(this);
         return view;
     }

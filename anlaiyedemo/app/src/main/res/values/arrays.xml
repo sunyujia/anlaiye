@@ -5,7 +5,6 @@
         <item>俺来卖</item>
         <item>俺有才</item>
         <item>俺来玩</item>
-        <item>俺有金</item>
         <item>消息</item>
         <item>俺要加入</item>
         <item>分享给好友</item>
@@ -38,7 +37,6 @@
         <item>@drawable/menu_selector_2</item>
         <item>@drawable/menu_selector_3</item>
         <item>@drawable/menu_selector_4</item>
-        <item>@drawable/menu_selector_7</item>
         <item>@drawable/menu_selector_5</item>
         <item>@drawable/menu_selector_6</item>
         <item>@drawable/menu_selector_7</item>
