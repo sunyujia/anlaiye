@@ -11,26 +11,48 @@
         />
 
     <!--<ScrollView-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="match_parent"-->
-        <!--android:layout_below="@id/title_layout"-->
-        <!--android:scrollbars="none"-->
-        <!-->-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:layout_below="@id/title_layout"-->
+    <!--android:scrollbars="none"-->
+    <!-->-->
 
-        <!--<LinearLayout-->
-            <!--android:layout_width="match_parent"-->
-            <!--android:layout_height="match_parent"-->
-            <!--android:orientation="vertical"-->
-            <!-->-->
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical"-->
+    <!-->-->
 
-            <ImageView
-                android:id="@+id/iv_content_order"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@id/title_layout"
-                android:scaleType="fitXY"
-                android:src="@drawable/my_mission_img"
-                />
-        <!--</LinearLayout>-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_layout">
+
+        <ImageView
+            android:id="@+id/iv_content_order"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/my_mission_img"
+            />
+
+        <Button
+            android:id="@+id/go_order_detail"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="280dp"
+            android:background="@null"/>
+
+        <Button
+            android:id="@+id/go_free_service"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="180dp"
+            android:background="@null"/>
+    </RelativeLayout>
+
+    <!--</LinearLayout>-->
     <!--</ScrollView>-->
 </RelativeLayout>

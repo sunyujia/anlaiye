@@ -40,10 +40,10 @@ public class UserInfoFragment extends Fragment implements View.OnClickListener {
                 startActivity(intent);
                 break;
             case R.id.order1_layout://代付款
-                fromTag = 0;
-                Intent intent1 = new Intent(getActivity(), MyOrderActivity.class);
-                intent1.putExtra("from", fromTag);
-                startActivity(intent1);
+//                fromTag = 0;
+//                Intent intent1 = new Intent(getActivity(), MyOrderActivity.class);
+//                intent1.putExtra("from", fromTag);
+//                startActivity(intent1);
                 break;
             case R.id.order2_layout://待抢单
                 fromTag = 1;

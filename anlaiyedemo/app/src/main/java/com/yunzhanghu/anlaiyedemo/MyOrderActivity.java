@@ -8,8 +8,6 @@ import android.view.Window;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import static com.yunzhanghu.anlaiyedemo.R.id.iv_content_order;
-
 public class MyOrderActivity extends FragmentActivity implements View.OnClickListener {
 
     private ImageView mIvContent;
@@ -23,16 +21,18 @@ public class MyOrderActivity extends FragmentActivity implements View.OnClickLis
         setContentView(R.layout.activity_my_order);
         mFromTag = getIntent().getIntExtra("from", 0);
         ImageView ivBack = (ImageView) findViewById(R.id.iv_return);
-        mIvContent = (ImageView) findViewById(iv_content_order);
+        mIvContent = (ImageView) findViewById(R.id.iv_content_order);
+        findViewById(R.id.go_free_service).setOnClickListener(this);
+        findViewById(R.id.go_order_detail).setOnClickListener(this);
         TextView tvTitle = (TextView) findViewById(R.id.tv_title);
         ivBack.setOnClickListener(this);
-        mIvContent.setOnClickListener(this);
-        if (mFromTag == 0) {
-            mIvContent.setImageResource(R.drawable.xxxxxxxx);
-        } else {
-            //设置代付款图片
-            mIvContent.setImageResource(R.drawable.my_mission_img);
-        }
+//        mIvContent.setOnClickListener(this);
+//        if (mFromTag == 0) {
+//            mIvContent.setImageResource(R.drawable.xxxxxxxx);
+//        } else {
+//            //设置代付款图片
+//            mIvContent.setImageResource(R.drawable.my_mission_img);
+//        }
         tvTitle.setText("俺消费的订单");
     }
 
@@ -41,10 +41,16 @@ public class MyOrderActivity extends FragmentActivity implements View.OnClickLis
         if (v.getId() == R.id.iv_return) {
             finish();
         } else {
-            if (mFromTag == 0) {
-                startActivityForResult(new Intent(this, OrderDetailActivity.class), 1001);
-            } else {
+//            if (mFromTag == 0) {
+//                startActivityForResult(new Intent(this, OrderDetailActivity.class), 1001);
+//            } else {
+//                startActivityForResult(new Intent(this, FreeServiceActivity.class), 1001);
+//            }
+            if (v.getId() == R.id.go_free_service) {
                 startActivityForResult(new Intent(this, FreeServiceActivity.class), 1001);
+
+            } else {
+                startActivityForResult(new Intent(this, OrderDetailActivity.class), 1001);
             }
         }
     }

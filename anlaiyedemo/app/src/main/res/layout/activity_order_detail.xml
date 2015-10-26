@@ -24,6 +24,7 @@
             android:text="立即付款"
             android:textColor="#ffffff"
             android:textSize="20sp"
+            android:visibility="gone"
             />
 
         <TextView
